@@ -2,6 +2,12 @@ name: Manual Workflow
 
 on:
     workflow_dispatch:
+        # can add the input as well
+        inputs:
+            name:
+                description: 'Name'
+                type: string
+                default: 'test'
 
 
 jobs:
