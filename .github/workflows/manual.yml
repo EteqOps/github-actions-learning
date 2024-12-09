@@ -13,8 +13,16 @@ on:
                 description: 'Age'
                 type: number
                 required: true    
-            
-
+            gender:
+                description: 'Gender'
+                type: choice
+                options:
+                    - Male
+                    - Female
+                    - Other
+            married:
+                description: 'Is married'
+                type: boolean
 
 jobs:
     manual:
@@ -26,3 +34,9 @@ jobs:
 
             - name: Age
               run: echo "Your age is ${{inputs.age}}"
+
+            - name: Gender
+              run: echo "${{inputs.gender}}"
+
+            - name: Married
+              run: echo "Married: ${{inputs.married}}"
