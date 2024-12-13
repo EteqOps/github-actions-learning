@@ -36,6 +36,10 @@ jobs:
     deploy-angular:
         runs-on: ubuntu-latest
        # needs: build-angular // For a one job.
+        # needs: // List of dependencies can be displayed like this as well
+        #     - build-angular
+        #     - test-job
+        if: ${{ always() }} # No matter whether dependent jobs are successful or failed after finishing them this job will start
         needs: [build-angular, test-job]
 
         steps:
