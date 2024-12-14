@@ -8,7 +8,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
     - name: set output
       id: set-output
       shell: bash # Do need to specify, Default is bash
