@@ -10,3 +10,5 @@ how to schedule a github workflow using CRON (command run on notice)
     month (1-12)
     day of the week (0-6)
 dependancies between jobs in github workflows
+steps output
+job outputs
