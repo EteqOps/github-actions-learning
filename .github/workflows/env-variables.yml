@@ -20,6 +20,8 @@ jobs:
           echo "Hello, ${{ env.CHANNEL_NAME }}"
           echo "Hello, ${{ env.CHANNEL_NAME2 }}"
           echo "Hello, ${{ env.CHANNEL_NAME3 }}"
+          echo "Hello, $CHANNEL_NAME2  // Language specific syntax can be use in code only
+
 
       - name: Get comments on ${{ env.CHANNEL_NAME }}
         run: |
