@@ -1,0 +1,20 @@
+name: Environment variables
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greetings
+        run: echo "Hello, Tharindu Manoj"
+
+      - name: Get comments on Tharindu Manoj
+        run: |
+          #HTTPS /api/comments
+          echo "Awesome!!"
+          echo "Greate content"
+          echo "Thank you for sharing"

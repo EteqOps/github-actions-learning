@@ -1,0 +1,37 @@
+name: Step Output
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: set output
+      id: set-output
+      shell: bash # Do need to specify, Default is bash
+      run: | 
+        echo "age=23" >> $GITHUB_OUTPUT
+        echo "name=Tharindu Manoj" >> $GITHUB_OUTPUT
+
+
+    - name: set output 2
+      id: set-output2
+      shell: bash
+      run: | 
+        echo "salary=150000" >> $GITHUB_OUTPUT
+
+    - name: access output
+      run: |
+        echo "The name of the output name is : ${{ steps.set-output.outputs.name }}"
+        echo "the age of the output age is : ${{ steps.set-output.outputs.age }}"
+        echo "The salary of the output salary is : ${{ steps.set-output2.outputs.salary }}"
+
+    - name: access output 2
+      run: |
+        echo "The salary of the output salary is : ${{ steps.set-output2.outputs.salary }}"
+
+
+      

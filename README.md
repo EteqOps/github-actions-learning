@@ -11,4 +11,8 @@ day of a month (1-31)
 month (1-12)
 day of the week (0-6)
 dependancies between jobs in github workflows
-step outputs
+steps output
+job outputs
+Environment variables: workflow,step,job level
+
+
