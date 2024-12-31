@@ -10,10 +10,13 @@ env:
 jobs:
   demo:
     runs-on: ubuntu-latest
-
+    env:
+      CHANNEL_NAME2: "Tharindu Manoj 2"
     steps:
       - name: Greetings
-        run: echo "Hello, ${{ env.CHANNEL_NAME }}"
+        run: | 
+          echo "Hello, ${{ env.CHANNEL_NAME }}"
+          echo "Hello, ${{ env.CHANNEL_NAME2 }}"
 
       - name: Get comments on ${{ env.CHANNEL_NAME }}
         run: |
