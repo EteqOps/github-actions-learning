@@ -14,9 +14,12 @@ jobs:
       CHANNEL_NAME2: "Tharindu Manoj 2"
     steps:
       - name: Greetings
+        env:
+          CHANNEL_NAME3: "Tharindu Manoj 3"
         run: | 
           echo "Hello, ${{ env.CHANNEL_NAME }}"
           echo "Hello, ${{ env.CHANNEL_NAME2 }}"
+          echo "Hello, ${{ env.CHANNEL_NAME3 }}"
 
       - name: Get comments on ${{ env.CHANNEL_NAME }}
         run: |
