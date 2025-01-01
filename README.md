@@ -14,5 +14,7 @@ dependancies between jobs in github workflows
 steps output
 job outputs
 Environment variables: workflow,step,job level
+set environment variables programatically
+
 
 

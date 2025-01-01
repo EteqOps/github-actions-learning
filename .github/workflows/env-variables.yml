@@ -35,3 +35,13 @@ jobs:
     steps:
       - name: Greetings
         run: echo "Hello, ${{ env.CHANNEL_NAME }} from demo2"
+
+  demo3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set environment variables programmatically
+        run: echo 'COUNT=100000' >> $GITHUB_ENV
+
+      - name: Access environment variables
+        run: echo "Count is $COUNT"
