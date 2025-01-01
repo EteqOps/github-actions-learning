@@ -62,7 +62,7 @@ jobs:
 
     steps:
 
-      - name: Access updated environment variables from demo3
+      - name: Access updated environment variables from demo3 # It won't update for demo4 because it only update in step level
         run: | 
           echo "Count is $COUNT"
           echo "Channel Name is $CHANNEL_NAME"
