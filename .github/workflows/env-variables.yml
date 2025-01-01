@@ -55,3 +55,14 @@ jobs:
         run: | 
           echo "Count is $COUNT"
           echo "Channel Name is $CHANNEL_NAME"
+  
+  demo4:
+    runs-on: ubuntu-latest
+    needs: [demo3]
+
+    steps:
+
+      - name: Access updated environment variables from demo3
+        run: | 
+          echo "Count is $COUNT"
+          echo "Channel Name is $CHANNEL_NAME"
