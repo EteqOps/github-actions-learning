@@ -45,3 +45,13 @@ jobs:
 
       - name: Access environment variables
         run: echo "Count is $COUNT"
+
+      - name: Update environment variables
+        run: | 
+          echo 'CHANNEL_NAME=Test' >> $GITHUB_ENV
+          echo 'COUNT=200000' >> $GITHUB_ENV
+
+      - name: Access updated environment variables
+        run: | 
+          echo "Count is $COUNT"
+          echo "Channel Name is $CHANNEL_NAME"
