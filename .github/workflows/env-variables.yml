@@ -66,3 +66,13 @@ jobs:
         run: | 
           echo "Count is $COUNT"
           echo "Channel Name is $CHANNEL_NAME"
+
+  demo5:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Access repository variables
+        run: echo "${{ vars.USERNAME}}"
+
+      - name: Access repository secrets
+        run: echo "${{ secrets.PASSWORD}}"
