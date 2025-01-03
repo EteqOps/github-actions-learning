@@ -15,6 +15,8 @@ steps output
 job outputs
 Environment variables: workflow,step,job level
 set environment variables programatically
+variables and secrets
+Download artifacts in github workflow
 
 
 
