@@ -17,7 +17,7 @@ jobs:
                   path: artifact
                   github-token: ${{ github.token }}
                   repository: ${{ github.repository }} # manojtharindu11/repository-name
-                  run-id: 12610666085
+                  run-id: 12610682509
 
             - name: Display structure of downloaded artifact
               run: ls -R artifact
