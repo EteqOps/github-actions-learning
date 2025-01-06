@@ -17,7 +17,7 @@ jobs:
             #       path: artifact
             #       github-token: ${{ github.token }}
             #       repository: ${{ github.repository }} # manojtharindu11/repository-name
-            #       run-id: 12610682509 # This is the run id of the build-angular job. but it wouldn't worked for me.
+            #       run-id: 12610682509 # This is the run id of the build-angular job. have to enable the read write permission for the action in the repository settings
             - name: Download artifact
               uses: dawidd6/action-download-artifact@v6
               with:
