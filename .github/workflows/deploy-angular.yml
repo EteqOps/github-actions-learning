@@ -34,6 +34,6 @@ jobs:
 
             - name: Debug GitHub Token
               run: |
-                curl -H "Authorization: token ${{ github.token }}" \
+                curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                 https://api.github.com/repos/${{ github.repository }}/actions/workflows
             
