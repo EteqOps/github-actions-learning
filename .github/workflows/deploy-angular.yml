@@ -18,22 +18,17 @@ jobs:
             #       github-token: ${{ github.token }}
             #       repository: ${{ github.repository }} # manojtharindu11/repository-name
             #       run-id: 12610682509 # This is the run id of the build-angular job. but it wouldn't worked for me.
-            # - name: Download artifact
-            #   uses: dawidd6/action-download-artifact@v6
-            #   with:
-            #     name: build-artifact
-            #     path: artifact
-            #     workflow: build-deploy-angular.yml
-            #     github_token: ${{ github.token }}
-            #     repo: ${{ github.repository }}
-            #     run_number: 28
+            - name: Download artifact
+              uses: dawidd6/action-download-artifact@v6
+              with:
+                name: build-artifact
+                path: artifact
+                workflow: build-deploy-angular.yml
+                github_token: ${{ github.token }}
+                repo: ${{ github.repository }}
+                run_number: 28
                   
 
-            # - name: Display structure of downloaded artifact
-            #   run: ls -R artifact
-
-            - name: Debug GitHub Token
-              run: |
-                curl -H "Authorization: token ${{ github.token }}" \
-                https://api.github.com/repos/${{ github.repository }}/actions/workflows
+            - name: Display structure of downloaded artifact
+              run: ls -R artifact
             
