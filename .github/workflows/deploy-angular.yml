@@ -19,7 +19,7 @@ jobs:
             #       repository: ${{ github.repository }} # manojtharindu11/repository-name
             #       run-id: 12610682509 # This is the run id of the build-angular job. but it wouldn't worked for me.
             - name: Download artifact
-              uses: dawidd6/action-download-artifact@v7
+              uses: dawidd6/action-download-artifact@v6
               with:
                 name: build-artifact
                 path: artifact
