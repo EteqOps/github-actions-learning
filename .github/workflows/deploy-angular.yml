@@ -24,7 +24,7 @@ jobs:
                 name: build-artifact
                 path: artifact
                 workflow: build-deploy-angular.yml
-                github_token: ${{ github.token }}
+                github_token: ${{ secrets.GITHUB_TOKEN }}
                 repo: ${{ github.repository }}
                 run_number: 28
                   
