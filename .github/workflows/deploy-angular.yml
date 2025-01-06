@@ -23,7 +23,8 @@ jobs:
               with:
                 name: build-artifact
                 path: artifact
-                github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+                workflow: build-deploy-angular.yml
+                github_token: ${{ github.token }}
                 repo: ${{ github.repository }}
                 run_number: 28
                   
