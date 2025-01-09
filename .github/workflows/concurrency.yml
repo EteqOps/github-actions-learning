@@ -6,13 +6,26 @@ on:
       - main
   workflow_dispatch:
 
-concurrency:
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: false # If this is true, the currently running job will be canceled and the new job will be started.
+# concurrency:
+#     group: ${{ github.workflow }}-${{ github.ref }}
+#     cancel-in-progress: false # If this is true, the currently running job will be canceled and the new job will be started.
+# To make job level concurrency control, you can use the concurrency key in the job level.
 
 jobs:
     Sleep:
         runs-on: ubuntu-latest
+        concurrency:
+          group: Sleep-${{ github.workflow }}-${{ github.ref }}
+          cancel-in-progress: false
         steps:
             - name: Sleep for 10 seconds
               run: sleep 10
+
+    Sleep2:
+        runs-on: ubuntu-latest
+        concurrency:
+          group: Sleep-${{ github.workflow }}-${{ github.ref }}
+          cancel-in-progress: false
+        steps:
+            - name: Sleep for 20 seconds
+              run: sleep 20
