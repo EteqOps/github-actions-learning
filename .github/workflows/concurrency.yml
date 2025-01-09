@@ -28,4 +28,4 @@ jobs:
           cancel-in-progress: false
         steps:
             - name: Sleep for 20 seconds
-              run: sleep 20
+              run: sleep 20 
