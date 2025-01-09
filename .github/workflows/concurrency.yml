@@ -12,10 +12,10 @@ on:
 # To make job level concurrency control, you can use the concurrency key in the job level.
 
 jobs:
-    Sleep:
+    Sleep1:
         runs-on: ubuntu-latest
         concurrency:
-          group: Sleep-${{ github.workflow }}-${{ github.ref }}
+          group: Sleep1-${{ github.workflow }}-${{ github.ref }}
           cancel-in-progress: false
         steps:
             - name: Sleep for 10 seconds
@@ -23,6 +23,7 @@ jobs:
 
     Sleep2:
         runs-on: ubuntu-latest
+        needs : Sleep1
         concurrency:
           group: Sleep2-${{ github.workflow }}-${{ github.ref }}
           cancel-in-progress: false
