@@ -24,7 +24,7 @@ jobs:
     Sleep2:
         runs-on: ubuntu-latest
         concurrency:
-          group: Sleep-${{ github.workflow }}-${{ github.ref }}
+          group: Sleep2-${{ github.workflow }}-${{ github.ref }}
           cancel-in-progress: false
         steps:
             - name: Sleep for 20 seconds
