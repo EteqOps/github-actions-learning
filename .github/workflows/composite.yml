@@ -13,9 +13,12 @@ jobs:
     #     uses: manojtharindu11/composite-github-actions@main
 
     steps:
+      - uses: actions/checkout@v4 # Make sure to add this line access the environment file within the same repository.
+    
       - name: Check composite Action
         id: setup-build-env # Can give any name
-        uses: manojtharindu11//set-up-build-environment-github-actions@v4
+        # uses: manojtharindu11//set-up-build-environment-github-actions@v4 # Access other repository
+        uses: ././github/actions/setup-build-environment
         with:
           pythonVersion: 3.10
           NodeJSVersion: 18.20.4
