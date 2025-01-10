@@ -15,14 +15,15 @@ jobs:
     steps:
       - name: Check composite Action
         id: setup-build-env # Can give any name
-        uses: manojtharindu11//set-up-build-environment-github-actions@v3
+        uses: manojtharindu11//set-up-build-environment-github-actions@v4
         with:
           pythonVersion: 3.10
           NodeJSVersion: 18.20.4
-
+          
       - name: Output from action
         run: | 
-          echo "Repository Owner = ${{ steps.setup-build-env.output.repoOwner }}"
-          echo "Default Branch = ${{ steps.setup-build-env.output.DefaultBranch }}"
-          echo "CICD Key = ${{ steps.setup-build-env.output.CICDKey }}"
+          echo "Repository Owner = ${{ steps.setup-build-env.outputs.repoOwner }}"
+          echo "Default Branch = ${{ steps.setup-build-env.outputs.DefaultBranch }}"
+          echo "CICD Key = ${{ steps.setup-build-env.outputs.CICDKey }}"
+
 
