@@ -1,0 +1,9 @@
+name: Echo Text
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Echo Text
+      shell: bash
+      run: echo "Hello, World!" # To create composite actions have to create separate folder and add action.yml file
