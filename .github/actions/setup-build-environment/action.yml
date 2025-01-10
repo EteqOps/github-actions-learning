@@ -1,0 +1,44 @@
+name: Setup Build Environment
+
+inputs:
+  pythonVersion:
+    description: "Version of Python"
+    required: true
+    default: '3.x'
+    
+  NodeJSVersion:
+    description: "Version of NodeJS"
+    required: false
+    default: '18.x'
+
+outputs:
+  repoOwner:
+    value: "${{ steps.vars.outputs.repoOwner }}"
+  DefaultBranch:
+    value: "${{ steps.vars.outputs.defaultBranch }}"
+  CICDKey:
+    value: "${{ steps.vars.outputs.cicdKey }}"
+
+    
+    
+runs:
+  using: "composite"
+
+  steps:
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+
+    - name: Variables
+      id: vars
+      shell: bash #pwsh for Powershel
+      run: |
+        echo "repoOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
+        echo "defaultBranch=main" >> $GITHUB_OUTPUT
+        echo "cicdKey=ManojCICDKey" >> $GITHUB_OUTPUT
