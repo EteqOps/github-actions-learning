@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Check composite Action
         id: setup-build-env # Can give any name
-        uses: manojtharindu11//set-up-build-environment-github-actions@v2
+        uses: manojtharindu11//set-up-build-environment-github-actions@v3
         with:
           pythonVersion: 3.10
           NodeJSVersion: 18.20.4
