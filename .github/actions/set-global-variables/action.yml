@@ -20,5 +20,6 @@ runs:
     - name: Set Global Variables
       shell: bash
       id: globals
-      run: ${{ github.action_path }}/globals.sh
-      # Rus a script global.sh to set the global variables
+      working-directory: ${{ github.action_path }}
+      run: ./globals.sh
+      # Rus a script globals.sh to set the global variables
