@@ -12,6 +12,10 @@ runs:
   using: "composite"
 
   steps:
+
+    - name: Debug Directory
+      run: ls -al ${{ github.action_path }}
+
     - name: Set Global Variables
       shell: bash
       id: globals
