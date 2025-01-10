@@ -1,0 +1,13 @@
+name: Composite Action
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  composition-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check composite Action
+        uses: manojtharindu11/composite-github-actions@main
