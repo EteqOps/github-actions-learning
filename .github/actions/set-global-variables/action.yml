@@ -15,6 +15,7 @@ runs:
 
     - name: Debug Directory
       run: ls -al ${{ github.action_path }}
+      shell: bash
 
     - name: Set Global Variables
       shell: bash
