@@ -51,13 +51,5 @@ This repository is dedicated to documenting and practising various features of G
 
 ---
 
-## Purpose of This Repository
-This repository serves as:
-1. A practice ground to experiment with GitHub Actions.
-2. A reference guide for concepts, examples, and use cases.
-3. A portfolio of learned skills in CI/CD automation using GitHub Actions.
-
----
-
 ## Resources
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
