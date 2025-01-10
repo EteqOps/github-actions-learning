@@ -1,30 +1,63 @@
-# Github_Actions
+# github-actions-learning
 
-Github and github actions
-create simple github workflow
-run workflow manually with inputs
-disable a github workflow
-how to schedule a github workflow using CRON (command run on notice)
-minutes (0-59)
-hour (0-23)
-day of a month (1-31)
-month (1-12)
-day of the week (0-6)
-dependancies between jobs in github workflows
-steps output
-job outputs
-Environment variables: workflow,step,job level
-set environment variables programatically
-variables and secrets
-Download artifacts in github workflow
-download artifacts from another workflow
-downoload artifact using another workflow by run number
-workflow concurrency
-job concurrency 
-composite actions
-passing inputs outputs and versioning in composite action
-composite actions in the same repository
-execute script from composite action
-reusable workflows
+This repository is dedicated to documenting and practising various features of GitHub Actions. By following a comprehensive YouTube tutorial, I explored essential concepts and advanced techniques to create, manage, and optimize GitHub workflows.
 
+---
 
+## Topics Covered
+
+### Basics of GitHub Actions
+- Introduction to GitHub and GitHub Actions
+- Creating a simple GitHub workflow
+- Running workflows manually with inputs
+- Disabling a GitHub workflow
+
+### Scheduling Workflows
+- How to schedule workflows using **CRON**:
+  - Minutes (0-59)
+  - Hours (0-23)
+  - Days of the month (1-31)
+  - Months (1-12)
+  - Days of the week (0-6)
+
+### Dependencies and Outputs
+- Managing dependencies between jobs in workflows
+- Using **steps outputs** and **job outputs**
+
+### Environment Variables
+- Understanding workflow, step, and job-level environment variables
+- Setting environment variables programmatically
+
+### Variables and Secrets
+- Using and managing variables and secrets securely
+
+### Artifacts
+- Downloading artifacts in a workflow
+- Downloading artifacts from another workflow
+- Accessing artifacts using another workflow by run number
+
+### Concurrency
+- Managing workflow concurrency
+- Managing job concurrency
+
+### Composite Actions
+- Creating composite actions
+- Passing inputs, outputs, and versioning in composite actions
+- Using composite actions in the same repository
+- Executing scripts from composite actions
+
+### Reusable Workflows
+- Setting up and using reusable workflows
+
+---
+
+## Purpose of This Repository
+This repository serves as:
+1. A practice ground to experiment with GitHub Actions.
+2. A reference guide for concepts, examples, and use cases.
+3. A portfolio of learned skills in CI/CD automation using GitHub Actions.
+
+---
+
+## Resources
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
