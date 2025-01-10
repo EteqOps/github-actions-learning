@@ -8,6 +8,21 @@ jobs:
   composition-action:
     runs-on: ubuntu-latest
 
+    # steps:
+    #   - name: Check composite Action
+    #     uses: manojtharindu11/composite-github-actions@main
+
     steps:
       - name: Check composite Action
-        uses: manojtharindu11/composite-github-actions@main
+        id: setup-build-env # Can give any name
+        uses: manojtharindu11//set-up-build-environment-github-actions@v1
+        with:
+          pythonVersion: 3.10
+          NodeJSVersion: 18.20.4
+
+      - name: Output from action
+        run: | 
+          echo "Repository Owner = "${{ steps.setup-build-env.output.repoOwner }}
+          echo "Default Branch = "${{ steps.setup-build-env.output.DefaultBranch }}
+          echo "CICD Key = "${{ steps.setup-build-env.output.CICDKey }}
+
