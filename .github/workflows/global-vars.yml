@@ -1,0 +1,20 @@
+name: Global Variables
+
+on:
+    workflow_dispatch:
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Set Global Variables
+              uses: ./.github/actions/set-global-variables
+              id: globals
+
+            - name: Print Global Variables
+              run: |
+                echo "EmailRecipients: ${{ steps.globals.outputs.EmailRecipients }}"
+                echo "CICDKey: ${{ steps.globals.outputs.CICDKey }}"
