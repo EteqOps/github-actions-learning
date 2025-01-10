@@ -4,11 +4,9 @@ outputs:
   EmailRecipients:
     description: 'Email Recipients'
     value: ${{ steps.globals.outputs.EmailRecipients }}
-    required: true
   CICDKey:
     description: 'CICD Key'
     value: ${{ steps.globals.outputs.CICDKey }}
-    required: true
 
 runs:
   using: "composite"
